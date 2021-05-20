@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -27,26 +29,14 @@ namespace BookStoreUsingDotnetCoreMvc
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();           
 
-            //app.Use(async (context, next) => {
-            //    await context.Response.WriteAsync("Hello from First Midd");
-            //     next();
-            //    await context.Response.WriteAsync("Hello from First Midd-2");
-            //});
-
-           
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
-                //endpoints.MapGet("/", async context =>
-                //{
-                //    //await context.Response.WriteAsync("Hello World!");
-                //});
-            });
-
-           
+                endpoints.MapDefaultControllerRoute();  
+            });           
         }
     }
 }

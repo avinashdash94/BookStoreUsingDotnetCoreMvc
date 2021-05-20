@@ -8,9 +8,19 @@ namespace BookStoreUsingDotnetCoreMvc.Controllers
 {
     public class HomeController: Controller
     {
-        public string Index()
+        public ViewResult Index()
         {
-            return "Web method";
+            return View();
+        }
+
+        public ViewResult AboutUs()
+        {
+            return View();
+        }
+
+        public ViewResult ContactUs()
+        {
+            return View();
         }
     }
 }
