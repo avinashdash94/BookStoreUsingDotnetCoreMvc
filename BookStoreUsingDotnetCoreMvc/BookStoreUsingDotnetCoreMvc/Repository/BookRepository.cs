@@ -27,10 +27,10 @@ namespace BookStoreUsingDotnetCoreMvc.Repository
         {
             return new List<BookModel>()
             {
-                new BookModel(){Id =1, Title="MVC", Author="Nitish"},
-                new BookModel(){Id =2, Title="C#", Author="Moni"},
-                new BookModel(){Id =3, Title="Java", Author="Roni"},
-                new BookModel(){Id =4, Title="Php", Author="Tony"}
+                new BookModel(){Id =1, Title="MVC", Author="Nitish", Description="This is the description for the MVC book"},
+                new BookModel(){Id =2, Title="C#", Author="Moni", Description="This is the description for the C# book"},
+                new BookModel(){Id =3, Title="Java", Author="Roni", Description="This is the description for the Java book"},
+                new BookModel(){Id =4, Title="Php", Author="Tony", Description="This is the description for the Php book"}
 
             };
         }
