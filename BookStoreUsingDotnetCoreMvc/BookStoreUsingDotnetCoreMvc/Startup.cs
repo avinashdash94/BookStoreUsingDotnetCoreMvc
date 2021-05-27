@@ -38,7 +38,15 @@ namespace BookStoreUsingDotnetCoreMvc
 
             app.UseEndpoints(endpoints =>
             {
+                //** it is the default route i.e cotroller and action method 
                 endpoints.MapDefaultControllerRoute();  
+
+                //**Custom route creation if we want to add 
+                //endpoints.MapControllerRoute(
+                //    name: "Default",
+                //    pattern: "bookApp/{controller=Home}/{action=Index}/{id?}"
+                //    );
+
             });           
         }
     }
