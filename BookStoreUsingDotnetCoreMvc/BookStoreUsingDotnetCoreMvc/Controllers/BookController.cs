@@ -37,5 +37,15 @@ namespace BookStoreUsingDotnetCoreMvc.Controllers
             return _bookRepository.SerachBook(bookName, authorName);
         }
 
+        public ViewResult AddNewBook()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult AddNewBook(BookModel bookModel)
+        {
+            return View();
+        }
     }
 }
